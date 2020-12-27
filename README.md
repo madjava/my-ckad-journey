@@ -38,7 +38,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
   This is not an exhaustive list though but found these to be common ones and can save you some typing, time and reduce typos too
 
-- Learn to use the `-h` help flag for quick info on imperative commands if you are stuck or not entirely sure at that moment. e.g.
+- Learn to use the `-h` help flag for quick info on imperative commands if you are stuck or not entirely sure at that moment or want to quickly verify command options available. e.g.
   - `k run -h`
   - `k expose -h`
   - `k create -h`

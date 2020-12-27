@@ -50,7 +50,7 @@ alias k=kubectl
 ### Pods
 
 - `k get po --no-headers | wc -l`<br>
-   If you need to get to total number of pods. You can add the `-n` flag if looking at a particular namespace
+   If you need to know the total number of pods. You can add the `-n` flag if looking at a particular namespace
 
 - `k get po -A`<br>
    Gets all Pods in all namespaces. Very handy if you need to find a faulty pod<br>
@@ -59,7 +59,7 @@ alias k=kubectl
    Gets all Pods in a particular namespace. Another quick way to find failing resource by just looking at the `READY` column or `STATUS` you can tell if something is not right.
 
    `k get po -o wide`<br>
-   For some details about the pods and its state. e.g. it's `IP`, `NODE` also stats like `STATUS` and `READY` info.
+   As above but with more details about the pods e.g. it's `IP`, `NODE` also stats like `STATUS` and `READY` info.
 
 - `k run mypod --image=nginx --namespace=dev --dry-run=client -o yaml`<br>
    or<br>
@@ -95,28 +95,28 @@ alias k=kubectl
 - `k get po --show-labels`<br>
   Lists pods with their labels. Can be used with the `-A` combination when doing a larger search and or in combination with the namespace option `-n <ns>` to limit results.
 
-- `k label po backend env-`<br>
-  Removes a label called `env` on the pod called `backend`
+- `k label po <pod-name> env-`<br>
+  Removes a label called `env` on the pod called `pod-name`
 
 - `k get all -n <name-space> -l tier=control-plane`<br>
    Get all resources in a particular namespace limited by the label<br>
 
    `k get all -n <name-space>`<br>
    Dumps all resource detail to your terminal.<br>
-   You can add the `--no-header` flag if you want to do some counting by piping to `grep` but didn't need to do that during my exam.
+   You can add the `--no-header` flag if you want to do some counting by piping to `grep`.
 
 - `k run backend --image=nginx --serviceaccount=sa-name`<br>
    When you need to create a pod with a giving service account name. You can combine this with the `--dry-run=client -o yaml` to generate a manifest file to further update if required. You at are sure this bit is covered.
 
-- `k run app --image=busybox --dry-run=client -o yaml  -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;'`<br>
-  Super quick command to create a manifest file set with default command to run. Depending on the requirement you may not even need the `--dry-run=client -o yaml` and can create to container straight away, just understand the requirement.
+- `k run app --image=busybox --dry-run=client -o yaml  -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskusage.log; sleep 5; done;'`<br>
+  Super quick command to create a manifest file set with default command to run. Depending on the requirement you may not even need the `--dry-run=client -o yaml` and can create to container straight away, understanding the expectation helps.
 
   Also if you need to pass this definition to a file for further updating which might likely be the case then the `> manifest-file.yaml` comes at the end.<br> e.g.<br>
   `k run app --image=busybox --dry-run=client -o yaml  -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/somefile.txt; sleep 5; done;' > manifest-file.yaml`<br>
 
   Don't add it after the `--dry-run=client -o yaml` as your fingers (brain) may be used to already.
 
-- `k exec mypod -c pod-container -it -- /bin/sh`<br>
+- `k exec mypod -c <pod-container> -it -- /bin/sh`<br>
   Log into a particular container called `pod-container` on the `mypod` pod
 
 - `k exec <pod-name> -it -- env`<br>
@@ -150,10 +150,10 @@ alias k=kubectl
   Quickly create a deployment called `mydeploy` with a pod running the `nginx` image and 3 replicas. You may need to update the manifest file further or this could suffice depending on the task at hand.
 
 - `k get deploy <deployment-name> -o yaml`<br>
- Gets the deployment details in yaml format. You can redirect to a file if need be if you want to edit the deployment.
+ Gets the deployment details in yaml format. You can redirect to a file if need be if you want to edit the deployment. **Note** Getting K8s object details is now really verbose due to additions of a `managedFields` property, output would not be as neat as you may see in some tutorials.
 
 - `k edit deploy/<deployment-name>`<br>
- Quick way to edit an existing deployment straight from the terminal. Once you save and exit Vim (or Nano) K8s would apply your changes.
+ Quick way to edit an existing deployment straight from the terminal. Once you save and exit the editor in the terminal K8s would apply your changes.
 
 - `k describe deploy <deployment-name> | grep -i containers -A2`<br>
 A quick way to list out a deployments containers. The `-i` flag for the `grep` command is for case insensitivity and `-A2` says give me just two lines, which should include the container, it's name and it's image.
@@ -185,15 +185,15 @@ Creates a service called `service-name` and exposes the pod called `pod-name` on
 - `k expose po <pod-name> --port=6379 --target-port=6379 --name=service-name`<br>
 Same as above but this time we want to specify a port and a targetPort which is the port the pods are listening on.
 
-- `k run mypod --image=nginx --port=80 --expose --dry-run=client -o yaml`
- Quickly create service and pod exposed by the service. Nice if the pod does not already exist and you are asked to create a pod and then create a service to expose the pod. This one-liner would be massive time saver in such a situation.
+- `k run mypod --image=nginx --port=80 --expose --dry-run=client -o yaml`<br>
+ Quickly create a service and pod exposed by the service. Nice if the pod does not already exist and you are asked to create a pod and then create a service to expose the pod. This one-liner would be massive time saver in such a situation.
 
 - `k expose deploy mydeploy --port=80 --target-port=8000  --dry-run=client -o yaml`<br>
 Quick command which creates a service for the `mydeploy` deployment
 
 ### Nodes
 
-- `k taint nodes node-name key=value:NoSchedule`<br>
+- `k taint nodes <node-name> key=value:NoSchedule`<br>
    Quickly taint a node with the `NoSchedule` option. No need to wad through documentation to figure this out.
 
 - `k describe node <node-name> | grep -i taint`<br>
@@ -213,11 +213,11 @@ Quick command which creates a service for the `mydeploy` deployment
 - `k top node`<br>
   If you need to findout resource consumption for all nodes. e.g. to determine from the list of node which one is using memory or cpu, the colums section from this output contains the info you would need.
 
-- `k top node <node-name>`<br>  
-  Same as above but specific to the specified node.
+- `k top node <node-name>`<br>
+   Same as above but specific to the specified node.
 
 - `k top pod`<br>
-  Similar to above but for examining pod resource usage. This is useful if you have a list of running pod and want to see which is using the most resource. It can be combine with the `-n` option to be more namespace specific.
+  Similar to above but for examining pod resource usage. This is useful if you have a list of running pod and want to see which is using the most resource. It can be combined with the `-n` option to be more namespace specific.
 
 - `k top pod <pod-name>`<br>
   Same as above but specific to the specified pod.
@@ -226,7 +226,7 @@ Quick command which creates a service for the `mydeploy` deployment
 ### Rollout and Versioning
 
 - `k rollout undo deploy <deployment-name>`<br>
-   Quickly undo a recent deployment change to the deployment called `deployment-name`.
+   Quickly undo the most recent change to the deployment called `deployment-name`.
 
 - `k rollout history deploy <deploy-name>`<br>
    List current deployment revisions for the `deploy-name` deployment.
@@ -271,10 +271,6 @@ Same as above but in this example, we specify the command for the container as p
 - `k create configmap db-config --from-env-file=config.txt`<br>
   If creating from a file.
 
-  **Note:** You can create a config by
-  `echo -e "key1=value1\nkey2=value2\nkey3=value3" > the-config-file.txt` if asked to use a config file with the requested values. If the options a many best use Vim or Nano to create the file.
-
-
 ### Service Account
 - `k create sa <sa-name> -n <name-space>`<br>
   Quickly creates a service account called `sa-name` in the namespace called `name-space`.
@@ -294,7 +290,7 @@ Get quick info about the networkpolicy. Comes in handy when troubleshooting conn
 - `k get pvc`<br>
   Displays available persistentvolume claims available.
 
-**Note:** `ps`'s and `pvc`'s don't have imperative commands that can be used to quickly create them at this time. This is one of those places where you need to be armed with your K8s reference documentation and make sure you have relevant sections bookmarked for quick access.
+**Note:** `ps`'s and `pvc`'s don't have imperative commands that can be used to quickly create them at this time. This is one of those places where you need to be armed with your K8s reference documentation and make sure you have relevant sections bookmarked for quick access. Another area is around ingress and egress, you'd have to use the documentation.
 
 🧨 Make sure when using the documentation examples your `storageClassName` names match. If asked to specify a particular storage class name in your `pv` manifest file then make sure that matches the definition in the `pvc` also. This fact can get lost or omitted while copy-pasting from one place to another.  
 
@@ -317,4 +313,4 @@ I hope these come in handy and most importantly come back to memory if/when you 
 
 You can continue reading up on some preparation tips and resources that i found helpful [here](README.md).
 
-Best of luck in your exams 🙏🏽.
+Best of luck 🙏🏽
