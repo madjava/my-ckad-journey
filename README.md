@@ -42,6 +42,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
   - `k run -h`
   - `k expose -h`
   - `k create -h`
+  - `k autoscale -h`
 
   Lets assume you are asked to create a pod called xxx with xxx arguments and xxx labels with port xxxx. You could either:
 

@@ -170,6 +170,10 @@ Same as above but namespace specific. Note the `--dry-run -o yaml > manifest-fil
 - `k scale deployment/deploy --replicas=5`<br>
   Quick command to add more replicas for a deployment. No need to update the deployment manifest file then apply it if you are faced with this sort of task.
 
+- `k autoscale deployment foo --min=2 --max=10`<br>
+   Quickly create an autoscale for a deployment.<br>
+   Have a look at this command for options `k autoscale -h`. It might just save you some time.
+
 ### Service
 
 - `k create svc nodeport my-service --tcp=8080:80 --dry-run=client -o yaml`<br>
@@ -290,7 +294,7 @@ Get quick info about the networkpolicy. Comes in handy when troubleshooting conn
 - `k get pvc`<br>
   Displays available persistentvolume claims available.
 
-**Note:** `ps`'s and `pvc`'s don't have imperative commands that can be used to quickly create them at this time. This is one of those places where you need to be armed with your K8s reference documentation and make sure you have relevant sections bookmarked for quick access. Another area is around ingress and egress, you'd have to use the documentation.
+**Note:** `ps`'s and `pvc`'s don't have imperative commands that can be used to quickly create them at this time. This is one of those places where you need to be armed with your K8s reference documentation and make sure you have relevant sections bookmarked for quick access. Another area without direct imperative options at the moment is around ingress and egress, you'd have to use the documentation.
 
 🧨 Make sure when using the documentation examples your `storageClassName` names match. If asked to specify a particular storage class name in your `pv` manifest file then make sure that matches the definition in the `pvc` also. This fact can get lost or omitted while copy-pasting from one place to another.  
 
