@@ -122,7 +122,7 @@ Overall i was still happy i had managed my time well as i was able to get to all
 
 ### Training resources
 
-🔥[Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer/) by [Mumshad Mannambeth](https://www.udemy.com/user/mumshad-mannambeth/) and [Vijin Palazhi](https://www.udemy.com/user/vijin-palazhi-2/).
+🔥 [Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer/) by [Mumshad Mannambeth](https://www.udemy.com/user/mumshad-mannambeth/) and [Vijin Palazhi](https://www.udemy.com/user/vijin-palazhi-2/).
 
 I got this via [Udemy](https://www.udemy.com/) and can't emphasise enough, this course is a **MUST HAVE** trust me on this one. The [KodeCloud](https://kodekloud.com) labs are just awesome and gives you first hand practice test and environment to work with. I went though the Lighting labs and Mock exams at least twice and also went through each and every practice test after each lecture sections and their solution videos to learn what i did wrong and also see how someone else would tackle the same task for the ones i got right.
 
@@ -141,7 +141,7 @@ Whilst i didn't go through this course for certification purposes it's a very go
 
 ### CKAD Practice Tests
 
-These tests really really helped me, i can't say it enough, i went though each twice. First pass through the result where not all that pretty 😜, so i found out what i was doing wrong, filled the knowledge gaps and circled back this time armed with more knowledge.
+These tests really really helped me, i can't say it enough, i went though each twice. First pass through was abit rough in some areas, so i found out what i was doing wrong, filled the knowledge gaps and circled back.
 
 * [CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
 * [Practice Enough With These 150 Questions for the CKAD Exam](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
