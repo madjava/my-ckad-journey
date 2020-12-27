@@ -62,13 +62,13 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
   This can be a handy tool if you find getting info from the documentation is beginning to become a hassle, have a play with various combinations and have your own system of digging around the manual from the terminal quickly.
 
-- Learn to use `--dry-run=client -o yaml` to generate yaml manifest files with you can further edit. Also dont forget to redirect to an actual file e.g. `k run po nginx --dry-run=client -o yaml > my-pod.yaml` to create the manifest file.<br>
+- Learn to use `--dry-run=client -o yaml` to generate yaml manifest files with you can further edit. Also don't forget to redirect to an actual file e.g. `k run po nginx --dry-run=client -o yaml > my-pod.yaml` to create the manifest file.<br>
 
 - 🧨 Don't create yaml files from scratch, you would run out of time for sure if you do that. You either copy an example from the documentation and modify or use the dry-run option to create a skeleton which is then edited accordingly.
 
 - Learn to use the K8s documentation, have your bookmarks ready for speedy access. I have provided my bookmark [here](my-k8s-bookmarks.html.zip) that you can use for a start and build upon. Import that in your **Chrome browser** and further update.
 
-- 🧨 Don't waist time on a question, if it's taking too long, flag it and comeback to it.
+- 🧨 Don't waste time on a question, if it's taking too long, flag it and comeback to it.
 
 - Learn to list all pod resources in all namespaces for troubleshooting purposes. If you are ever in a situation where you have to find the falling pod and no further details as to where it is. As simple as this sounds if you don't have quick commands at hand you'll spend too much time drilling down namespaces and pods. Have a look at [my list of handy K8s commands](kubectl-commands.md) for some ideas.
 
