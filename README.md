@@ -163,6 +163,7 @@ Vim and Nano can be used for the exam. If you intend to use Vim then you could g
 
 * [Getting Started with Vim: An Interactive Guide](https://scotch.io/tutorials/getting-started-with-vim-an-interactive-guide)
 * [Vim - Quick Guide](https://www.tutorialspoint.com/vim/vim_quick_guide.htm)
+* [Vim Crash Course | How to edit files quickly in CKAD / CKA exam](https://www.youtube.com/watch?v=knyJt8d6C_8&ab_channel=TheFrontOpsGuy)
 
 *Thanks to all creators of these content.*
 
@@ -173,6 +174,5 @@ Some other materials i found informative via Youtube and thought to mention here
 * [CKAD Certified Kubernetes Application Developer Certification Exam Tips](https://www.youtube.com/watch?v=dIBX8TQJxW8&ab_channel=CloudandBeyond)
 * [Office Hours | Hands-on Tips to Pass the CKAD Exam](https://www.youtube.com/watch?v=L6K_8dOFR5w&ab_channel=CloudAcademy)
 * [Tips on preparing for Certified Kubernetes Application Developer (CKAD)](https://www.youtube.com/watch?v=rnemKrveZks&feature=youtu.be)
-* [Vim Crash Course | How to edit files quickly in CKAD / CKA exam](https://www.youtube.com/watch?v=knyJt8d6C_8&ab_channel=TheFrontOpsGuy)
 
 *Thanks to all creators of these content.*
