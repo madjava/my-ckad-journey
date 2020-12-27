@@ -130,18 +130,18 @@ Overall i was still happy i had managed my time well as i was able to get to all
 
 ### Training resources
 
-* 🔥[Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer/) - Created by [Mumshad Mannambeth](https://www.udemy.com/user/mumshad-mannambeth/) and [Vijin Palazhi](https://www.udemy.com/user/vijin-palazhi-2/). I got this via [Udemy](https://www.udemy.com/) and can't emphasise enough, this course is a **MUST HAVE** trust me on this one.
+🔥[Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer/) - Created by [Mumshad Mannambeth](https://www.udemy.com/user/mumshad-mannambeth/) and [Vijin Palazhi](https://www.udemy.com/user/vijin-palazhi-2/). I got this via [Udemy](https://www.udemy.com/) and can't emphasise enough, this course is a **MUST HAVE** trust me on this one.
 
  The [KodeCloud](https://kodekloud.com) labs are just awesome and gives you first hand practice test and environment to work with. I went though the Lighting labs and Mock exams at least twice and also went through each and every practice test after each lecture sections.
 
 
-*  [Kubernetes Made Easy: Learn Kubernetes From Scratch](https://www.udemy.com/course/kubernetes-made-easy/) - Created by [Srinath Challa](https://www.udemy.com/user/srinathchalla/) via [Udemy](https://www.udemy.com/) also. Srinath's explanations are just so simple, straight forward and very specific. No long winded explanations or examples, exactly what i needed while preparing. Another **MUST HAVE**
+[Kubernetes Made Easy: Learn Kubernetes From Scratch](https://www.udemy.com/course/kubernetes-made-easy/) - Created by [Srinath Challa](https://www.udemy.com/user/srinathchalla/) via [Udemy](https://www.udemy.com/) also. Srinath's explanations are just so simple, straight forward and very specific. No long winded explanations or examples, exactly what i needed while preparing. Another **MUST HAVE**
 
-* [Kubernetes for Developers course (LFD259)](https://training.linuxfoundation.org/training/kubernetes-for-developers/) by The Linux Foundation.
+[Kubernetes for Developers course (LFD259)](https://training.linuxfoundation.org/training/kubernetes-for-developers/) by The Linux Foundation.
 
  Sadly i didn't finish this nice course as i ran out of preparation time and didn't want to postpone any further the date i had scheduled for the exam.
 
-* [Docker and Kubernetes: The Complete Guide](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/) - Created by [Stephen Grider](https://www.udemy.com/user/sgslo/) also via [Udemy](https://www.udemy.com/). Whilst i didn't go through this course for certification purposes it's a very good course and add's to your general knowledge and skill using Kubernetes.
+[Docker and Kubernetes: The Complete Guide](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/) - Created by [Stephen Grider](https://www.udemy.com/user/sgslo/) also via [Udemy](https://www.udemy.com/). Whilst i didn't go through this course for certification purposes it's a very good course and add's to your general knowledge and skill using Kubernetes.
 
  Buckle up though as this one is ***VERY*** lengthy and if you follow along with the examples and hands-on then it would even take more time to complete. I went through this course as a precursor to my exam preparations and i absolutely enjoyed it, comes in highly recommend.
 
