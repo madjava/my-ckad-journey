@@ -261,7 +261,7 @@ Same as above but in this example, we specify the command for the container as p
 ### ConfigMap
 - `k create cm <cm-name> --from-literal=key=value`<br>
   Quickly creates a configmap called `cm-name` with values `key=value`
-  If you are lucky to see a question that asks you to create a configmap, this is your go-to, would save you time which am sure you'd need down the road 🤓.
+  No need to waste time looking through the documentation, this is your go-to and would save you time 🤓.
 
   **Note:** You can add many `--from-literal=key=value` just make sure there's a space between them
 
