@@ -7,18 +7,18 @@ It was a nice experience preparing for the **CKAD** exams and wanted to share my
 
 ## Table of contents
 
-   * [Some K8s commands to know](#k8s-commands)
-   * [Exam tips and tricks](#tips)
-   * [Training resources](#resources)
-   * [CKAD Practice Tests](#practice-tests)
-   * [Vim Guides](#vim)
-   * [Other materials](#others)
+   * [Some K8s commands to know](#some-k8s-commands-to-know)
+   * [Exam tips and tricks](#exam-tips-and-tricks)
+   * [Training resources](#training-resources)
+   * [CKAD Practice Tests](#ckad-practice-tests)
+   * [Vim Guides](#vim-guide)
+   * [Other materials](#other-materials)
 
-### [Some K8s commands to know](#k8s-commands)
+### Some K8s commands to know
 
 I had to get familiar with a few `kubectl` commands some of which turned out to be very useful knowledge when i actually sat for the exams. Follow the link below to find a compilation of a few and i hope would be useful to you too while practicing and on the main exam. You can find [some useful terminal commands for the CKAD exams here](kubectl-commands.md).
 
-### [Exam tips and tricks](#tips)
+### Exam tips and tricks
 
 - Set an alias for `kubectl` command immediately you start
   ```bash
@@ -63,7 +63,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
 - Learn to use `--dry-run=client -o yaml` to generate yaml manifest files with you can further edit. Also dont forget to redirect to an actual file e.g. `k run po nginx --dry-run=client -o yaml > my-pod.yaml` to create the manifest file.<br>
 
- 🧨 Don't create yaml files from scratch, you would run out of time for sure if you do that. You either copy an example from the documentation and modify or use the dry-run option to create a skeleton which is then edited accordingly.
+- 🧨 Don't create yaml files from scratch, you would run out of time for sure if you do that. You either copy an example from the documentation and modify or use the dry-run option to create a skeleton which is then edited accordingly.
 
 - Learn to use the K8s documentation, have your bookmarks ready for speedy access. I have provided my bookmark [here](my-k8s-bookmarks.html.zip) that you can use for a start and build upon. Import that in your **Chrome browser** and further update.
 
@@ -128,7 +128,7 @@ Honestly i didn't answer all the questions, i had a question left and it was obv
 Overall i was still happy i had managed my time well as i was able to get to all the questions, i guess the other 18 where in order or at least for the most parts to give me a passing score 🙂.
 
 
-### [Training resources](#resources)
+### Training resources
 
 * 🔥[Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer/) - Created by [Mumshad Mannambeth](https://www.udemy.com/user/mumshad-mannambeth/) and [Vijin Palazhi](https://www.udemy.com/user/vijin-palazhi-2/). I got this via [Udemy](https://www.udemy.com/) and can't emphasise enough, this course is a **MUST HAVE** trust me on this one.
 
@@ -146,7 +146,7 @@ Overall i was still happy i had managed my time well as i was able to get to all
  Buckle up though as this one is ***VERY*** lengthy and if you follow along with the examples and hands-on then it would even take more time to complete. I went through this course as a precursor to my exam preparations and i absolutely enjoyed it, comes in highly recommend.
 
 
-### [CKADS Practice Tests](#practice-tests)
+### CKAD Practice Tests
 
 These tests really really helped me, i can't say it enough, i went though each twice. First pass through the result where not all that pretty 😜, so i found out what i was doing wrong, filled the knowledge gaps and circled back this time armed with more knowledge.
 
@@ -157,7 +157,7 @@ These tests really really helped me, i can't say it enough, i went though each t
 
 *Thanks to all the authors who took their time to put these questions together.*
 
-### [Vim Guide](#vim)
+### Vim Guides
 
 Vim and Nano can be used for the exam. If you intend to use Vim then you could get up-to-speed with these tutorial listed below and always use Vim when practicing so you get familiar with the commands and shortcuts. Resist the Atom, Sublime or VSCode urge 🤓.
 
@@ -167,7 +167,7 @@ Vim and Nano can be used for the exam. If you intend to use Vim then you could g
 *Thanks to all creators of these content.*
 
 
-### [Other materials](#others)
+### Other materials
 Some other materials i found informative via Youtube and thought to mention here
 
 * [CKAD Certified Kubernetes Application Developer Certification Exam Tips](https://www.youtube.com/watch?v=dIBX8TQJxW8&ab_channel=CloudandBeyond)

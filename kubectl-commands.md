@@ -10,15 +10,15 @@ kubectl commands
 * [Service](#service)
 * [Nodes](#nodes)
 * [Monitoring](#monitoring)
-* [Rollout & Versioning](#rollout)
-* [Jobs and CronJobs](#jobs)
+* [Rollout and Versioning](#rollout-and-versioning)
+* [Jobs and CronJobs](#jobs-and-cronjobs)
 * [ConfigMap](#configmap)
-* [Service Account](#serviceaccount)
-* [Network Policy](#networkpolicy)
+* [Service Account](#service-account)
+* [Network Policy](#network-policy)
 * [Storage](#storage)
 * [Volumes](#volumes)
-* [ResourceQuota](#resourcequota)
-* [Temporary containers](#temporarycontainers)
+* [Resource Quota](#resource-quota)
+* [Temporary containers](#temporary-containers)
 
 
 I'd be assuming my favourite alias is already set
@@ -29,14 +29,14 @@ alias k=kubectl
 
 > In some cases you would need to update the yaml manifest definition further so for some example below you will see the `--dry-run=client -o yaml` added. It's not entirely required, some tasks you can run immediately without needing a yaml file to update. Read the question carefully and decide what's the quickest best route.
 
-### [Creating a resource](#creating-a-resource)
+### Creating a resource
 - `k apply -f manifest-file.yaml`<br>
   Creates the resource defined in the manifest file
 
 - `k apply -n <name-space> -f ingress.yaml`<br>
   Creates the resource defined in the manifest file but in the `name-space` namespace.
 
-### [Namespace](#namespace)
+### Namespace
 
 - `k get ns --no-headers | wc -l`<br>
    If you ever need to know how many namespaces there currently are
@@ -47,7 +47,7 @@ alias k=kubectl
 - `k config set-context $(k config current-context) --namespace=dev`<br>
    Quickly switch to `dev` namespace. Actually didn't have to do this during my exam but had it committed to memory just incase. I always used the `-n` flag where namespace was involved.
 
-### [Pods](#pods)
+### Pods
 
 - `k get po --no-headers | wc -l`<br>
    If you need to get to total number of pods. You can add the `-n` flag if looking at a particular namespace
@@ -141,7 +141,7 @@ alias k=kubectl
 - `k run nginx --image=nginx --restart=Never --requests='cpu=100m,memory=256Mi' --limits='cpu=200m,memory=512Mi'`<br>
  Creates a pod with resource requirement already set. Let wading around through documentation. You dan output using `--dry-run=client -o yaml` to edit further if required.
 
-### [Deployment](#deployment)
+### Deployment
 
 - `k run myapp --image=nginx --port=80 --expose`<br>
   Creates a service and a pod called `myapp` on port 80
@@ -170,7 +170,7 @@ Same as above but namespace specific. Note the `--dry-run -o yaml > manifest-fil
 - `k scale deployment/deploy --replicas=5`<br>
   Quick command to add more replicas for a deployment. No need to update the deployment manifest file then apply it if you are faced with this sort of task.
 
-### [Service](#service)
+### Service
 
 - `k create svc nodeport my-service --tcp=8080:80 --dry-run=client -o yaml`<br>
    Creates a service of type NodePort with `port` set to `8080` and `targetPort` set to `80`.<br>
@@ -191,7 +191,7 @@ Same as above but this time we want to specify a port and a targetPort which is 
 - `k expose deploy mydeploy --port=80 --target-port=8000  --dry-run=client -o yaml`<br>
 Quick command which creates a service for the `mydeploy` deployment
 
-### [Nodes](#nodes)
+### Nodes
 
 - `k taint nodes node-name key=value:NoSchedule`<br>
    Quickly taint a node with the `NoSchedule` option. No need to wad through documentation to figure this out.
@@ -208,7 +208,7 @@ Quick command which creates a service for the `mydeploy` deployment
 - `k get nodes <node-name> --show-labels`<br>
    Lists the node called `node-name` with its labels. Omitting the node name would list all nodes labels in the current namespace.
 
-### [Monitoring](#monitoring)
+### Monitoring
 
 - `k top node`<br>
   If you need to findout resource consumption for all nodes. e.g. to determine from the list of node which one is using memory or cpu, the colums section from this output contains the info you would need.
@@ -223,7 +223,7 @@ Quick command which creates a service for the `mydeploy` deployment
   Same as above but specific to the specified pod.
 
 
-### [Rollout & Versioning](#rollout)
+### Rollout and Versioning
 
 - `k rollout undo deploy <deployment-name>`<br>
    Quickly undo a recent deployment change to the deployment called `deployment-name`.
@@ -243,7 +243,7 @@ Quick command which creates a service for the `mydeploy` deployment
 - `k set image deploy <deploy-name> <container-name>=<container-image>`<br>
   Updates a deployments image by setting `container-name` image another image or version
 
-### [Jobs and CronJobs](#jobs)
+### Jobs and CronJobs
 - `k create cronjob my-cron-job  --schedule="*/1 * * * *" --image=busybox --dry-run=client -o yaml`<br>
   Quickly create a cronjob that is defined to run every minute using the busybox image`
 
@@ -258,7 +258,7 @@ Same as above but in this example, we specify the command for the container as p
 - `create job -h`
 
 
-### [ConfigMap](#configmap)
+### ConfigMap
 - `k create cm <cm-name> --from-literal=key=value`<br>
   Quickly creates a configmap called `cm-name` with values `key=value`
   If you are lucky to see a question that asks you to create a configmap, this is your go-to, would save you time which am sure you'd need down the road 🤓.
@@ -275,19 +275,19 @@ Same as above but in this example, we specify the command for the container as p
   `echo -e "key1=value1\nkey2=value2\nkey3=value3" > the-config-file.txt` if asked to use a config file with the requested values. If the options a many best use Vim or Nano to create the file.
 
 
-### [Service Account](#serviceaccount)
+### Service Account
 - `k create sa <sa-name> -n <name-space>`<br>
   Quickly creates a service account called `sa-name` in the namespace called `name-space`.
 
-### [Network Policy](#networkpolicy)
+### Network Policy
 - `k describe netpol <policy-name>`<br>
 Get quick info about the networkpolicy. Comes in handy when troubleshooting connectivity issues with pods.
 
-### [Storage](#storage)
+### Storage
 - `k get sc`<br>
    Display available storage information
 
-### [Volumes](#volumes)
+### Volumes
 - `k get pv`<br>
   Displays available persistentvolumes
 
@@ -298,13 +298,13 @@ Get quick info about the networkpolicy. Comes in handy when troubleshooting conn
 
 🧨 Make sure when using the documentation examples your `storageClassName` names match. If asked to specify a particular storage class name in your `pv` manifest file then make sure that matches the definition in the `pvc` also. This fact can get lost or omitted while copy-pasting from one place to another.  
 
-### [ResourceQuota](#resourcequota)
+### Resource Quota
 - `k create quota myrq --hard=cpu=1,memory=1G,pods=2 --dry-run=client -o yaml`<br>
    Quickly creates a ResourceQuota called `myrq` with the provided resource requirements.
    You can run `k create quota -h` for more options when faced with this kind of question or if documentation does not cut it for you.
 
 
-### [Temporary containers](#temporarycontainers)
+### Temporary containers
 
 - `k run tmp --image=busybox --restart=Never -it --rm -- wget -O- 10.109.67.191:80`<br>
    You can quickly create temporary containers as in this example command that creates a pod using the busybox image then `wget` data from another ip. The `-it` gives you a shell the `--rm` removes the container once you exit the shell. This is usually useful when you want to get data from pods that are part of a ClusterIP service or test if pods are running.
