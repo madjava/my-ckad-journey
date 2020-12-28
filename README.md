@@ -89,13 +89,13 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 - Generally tasks around \'*Services & Networking*\', \'*State Persistence*\' and \'*Multi-Container Pods*\' tend to take longer time to complete. Not because of complexity but because there's lots of moving parts.<br><br>For example, to mount a volume on a pod you have to first create the `pv` then the `pvc` then the `pod` which has to be mounted on a volume, now imagine it's a multi-pod scenario then there's even more to do.<br><br>Summary, practice doing these task quickly, for persistent volumes there are no imperative commands as at the moment to quickly create template manifest files to build upon, you have to go to the documentation. Also if you need to set up ingress or egress amongst services you have to reference the documentation.<br><br>Learn to manage time in such scenarios, have your bookmark ready also. You can find what my Chrome bookmarks looked like [here](my-k8s-bookmarks.html.zip)
 
 - These are not Kubernetes specific but the shell. They however seem to be close friends with the K8s commands and would be nice to have very basic usage knowledge.
- - `curl`
- - `grep`
- - `wget`
- - `sleep`
- - `ls`
- - `cat`
- - `less`
+  - `curl`
+  - `grep`
+  - `wget`
+  - `sleep`
+  - `ls`
+  - `cat`
+  - `less`
 
  You will see them in one shape or another along the way
 
