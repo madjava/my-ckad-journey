@@ -142,7 +142,7 @@ alias k=kubectl
  Creates a pod with resource requirement already set. Let wading around through documentation. You dan output using `--dry-run=client -o yaml` to edit further if required.
 
 - `k delete po/<my-pod> --grace-period=0 --force`<br>
-   If you need to delete a pod always add the `--grace-period=0` flag else you'd have to wait a few precious seconds for the default wait time. There are a few aliases to this out there i had seen but i was comfortable typing this all out.<br>This actually came in handy for me during the exam as i had created a pod in the wrong namespace, when i realised i quickly removed it with this command recreated the pod in the expected namespace.
+   If you need to delete a pod always add the `--grace-period=0` flag else you'd have to wait a few precious seconds for the default wait time. There are a few aliases to this out there i had seen but i was comfortable typing this all out.<br>This actually came in handy for me during the exam as i had created a pod in the wrong namespace, when i realised i quickly removed it with this command and recreated the pod in the expected namespace.
 
 ### Deployment
 
