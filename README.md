@@ -1,4 +1,4 @@
-My CKAD Journey - Exam Tips & Resources
+My CKAD Exam Journey - Tips & Resources
 ===
 
 It was a nice experience preparing for the **CKAD** exams and wanted to share my journey with others preparing for the same.
