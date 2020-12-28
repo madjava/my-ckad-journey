@@ -44,21 +44,23 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
   - `k create -h`
   - `k autoscale -h`
 
-  Lets assume you are asked to create a pod called xxx with xxx arguments and xxx labels with port xxxx. You could either:
+  Say you need to create a pod called "webapp" running an nginx image with some arguments, labels and on port 80. You could either:
 
-  - Jump to the K8s documentation and get the info you need
-  - Use `--dry-run-client` to create quick manifest file to build upon or
-  - Quickly run `k run -h` which would list out example commands you can run, of which you can copy-paste and provide the required arguments then execute.
+  - Jump to the K8s documentation and get the info you need to put together a pod manifest file
+  - Use `--dry-run-client` to create quick manifest file to build upon, add all the pieces in
+  - Quickly run `k run -h` which would list out example commands you can run with all the possible options with can be executed all from the terminal.
 
 
 - Learn to use `explain`. It could come in handy if you are expected to provide certain properties in your manifest file and the example you are referencing on the K8s documentation does not include it. For example,
   - `k explain po.spec` or
   - `k explain po.spec.containers`
 
-  While practicing learn to use and drill down using `explain` quickly. You can combine it (pipe it) with `less` or `grep` for even more granularity.
+  While practicing learn to use and drill down using `explain` quickly. You can combine it (pipe it) with `less` or `grep` for even more granularity. Some examples include
 
   `k explain po.spec --recursive | less`<br>
-  `k explain po.spec.containers --recursive | grep -i readinessprobe -A15`
+  `k explain po.spec.containers --recursive | grep -i readinessprobe -A15`<br>
+  `k explain deploy.spec.strategy`<br>
+  `k explain svc.spec`
 
   This can be a handy tool if you find getting info from the documentation is beginning to become a hassle, have a play with various combinations and have your own system of digging around the manual from the terminal quickly.
 
