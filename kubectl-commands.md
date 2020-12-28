@@ -318,6 +318,6 @@ Play with these commands over and over again and use then in your practice tests
 
 I hope these come in handy and most importantly come back to memory if/when you need them during your exam.
 
-You can continue reading up on some [preparation tips](README.md) and resources that i found helpful [here](README.md).
+You can continue reading up on some [CKAD exam preparation tips](README.md) and resources that i found helpful [here](README.md).
 
 Best of luck 🙏🏽
