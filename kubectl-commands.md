@@ -141,6 +141,9 @@ alias k=kubectl
 - `k run nginx --image=nginx --restart=Never --requests='cpu=100m,memory=256Mi' --limits='cpu=200m,memory=512Mi'`<br>
  Creates a pod with resource requirement already set. Let wading around through documentation. You dan output using `--dry-run=client -o yaml` to edit further if required.
 
+- `k delete po/<my-pod> --grace-period=0 --force`<br>
+   If you need to delete a pod always add the `--grace-period=0` flag else you'd have to wait a few precious seconds for the default wait time. There are a few aliases to this out there i had seen but i was comfortable typing this all out.<br>This actually came in handy for me during the exam as i had created a pod in the wrong namespace, when i realised i quickly removed it with this command recreated the pod in the expected namespace.
+
 ### Deployment
 
 - `k run myapp --image=nginx --port=80 --expose`<br>
@@ -307,8 +310,8 @@ Get quick info about the networkpolicy. Comes in handy when troubleshooting conn
 ### Temporary containers
 
 - `k run tmp --image=busybox --restart=Never -it --rm -- wget -O- 10.109.67.191:80`<br>
-   You can quickly create temporary containers as in this example command that creates a pod using the busybox image then `wget` data from another ip. The `-it` gives you a shell the `--rm` removes the container once you exit the shell. This is usually useful when you want to get data from pods that are part of a ClusterIP service or test if pods are running.
-   Keep this knowledge as part of your tool set, you may need it.
+   You can quickly create temporary containers as in this example command that creates a pod using the busybox image then `wget` data from another pod in the cluster. The `-it` gives you a shell the `--rm` removes the container once you exit the shell. This is usually useful when you want to get data from pods that are part of a ClusterIP service or test if pods are running.<br>
+   Keep this knowledge in your tool set, you may need it.
 
 
 Play with these commands over and over again and use then in your practice tests. I found that once you cover the K8s CKAD exam [Domains & Competencies](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/) scope, there would be no strange surprises in the questions, you'd just need to learn to move fast, manage your time and quickly get the info you need for the task at hand.

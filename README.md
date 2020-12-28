@@ -78,7 +78,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
 - Get familiar with your Vim or Nano. CKAD is a very hands-on exam and you would need to use a terminal. No multiple choice questions. If you see multiple choice questions please pause and verify you are actually sitting for the CKAD 😝.
 
-- Some tasks can be accomplished entirely using imperative commands, if you see such questions i advice you use the imperative option than looking for documentation or editing yaml files. e.g one quick imperative command usage is if required to create a `ConfigMap` or `Secret`, expose a `Pod` or scale up a deployment's replicas, you can accomplish these entirely from the command line.<br><br>The K8s documentation is packed with lots of very useful examples but for exam purposes if you know an imperative way of addressing a task use it. Have a look at some imperative commands i have complied [here](kubectl-commands.md).
+- Some tasks can be accomplished entirely using imperative commands, if you see such questions i advice you use the imperative option than looking for documentation or editing yaml files. e.g one quick imperative command usage is if you need to create a `ConfigMap` or `Secret`, expose a `Pod` or scale up a deployment's replicas, you can accomplish these entirely from the command line.<br><br>The K8s documentation is packed with lots of very useful examples but for exam purposes if you know an imperative way of addressing a task use it. Have a look at some imperative commands i have complied [here](kubectl-commands.md).
 
 - 🧨 Make sure you are in the right context, there is a command provided in the question section that would put you in the right place, be sure to execute it before you start any question, at least that's what i did, didn't take any chances 🤓
 
@@ -94,11 +94,11 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
 - Save yourself the hassles and close all running applications, if on a Mac run `cmd+alt+esc` to see what's still active in the background, leave only your browser app running.
 
-- Make sure everywhere around you is clear, no books, papers or any other **_suspicious_** items. They are strict, but really nice and polite too 👌🏾
+- Make sure everywhere around you is clear, no books, papers or any other \"suspicious\" items. They are strict, but really nice and polite too 👌🏾
 
 - You can have only one other tab open, let that be the K8s documentation page.
 
-- If you don't have a webcam, best get one as you may have to do a `360deg` pan around where you are writing the exam and your desk space also. A webcam with a cord seems better suited, might be wonky panning with your PC but if that's what you've got or want to use it's fine also.
+- If you don't have a webcam, best get one as you may have to do a `360deg` pan around where you are writing the exam and your desk space also. A webcam with a cord seems better suited, might be wonky panning around with your laptop but if that's what you've got or want to use it's fine also.
 
 - Relax but be aware of time. Don't forget to attempt all questions even if not entirely sure of your answer, better a little than nothing at all.
 
@@ -140,7 +140,7 @@ Whilst i didn't go through this course for certification purposes it's a very go
 
 ### CKAD Practice Tests
 
-These tests really really helped me, i can't say it enough, i went though each twice. First pass through was abit rough in some areas, so i found out what i was doing wrong, filled the knowledge gaps and circled back.
+These tests where really helpful, i can't say it enough, i went though each twice. First pass through was abit rough in some areas, so i found out what i was doing wrong, filled the knowledge gaps and circled back through them all again.
 
 * [CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
 * [Practice Enough With These 150 Questions for the CKAD Exam](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
@@ -151,7 +151,7 @@ These tests really really helped me, i can't say it enough, i went though each t
 
 ### Vim Guides
 
-Vim and Nano can be used for the exam. If you intend to use Vim then you could get up-to-speed with these tutorial listed below and always use Vim when practicing so you get familiar with the commands and shortcuts. Resist the Atom, Sublime or VSCode urge 🤓.
+Vim and Nano can be used for the exam. If you intend to use Vim like i did then you could get up-to-speed with these tutorial listed below and always use Vim when practicing so you get familiar with Vim. Resist the Atom, Sublime or VSCode urge 🤓.
 
 * [Getting Started with Vim: An Interactive Guide](https://scotch.io/tutorials/getting-started-with-vim-an-interactive-guide)
 * [Vim - Quick Guide](https://www.tutorialspoint.com/vim/vim_quick_guide.htm)
