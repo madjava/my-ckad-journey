@@ -254,7 +254,7 @@ Quick command which creates a service for the `mydeploy` deployment
 - `k create cronjob my-cron-job  --schedule="*/1 * * * *" --image=busybox --dry-run=client -o yaml`<br>
   Quickly create a cronjob that is defined to run every minute using the busybox image`
 
-- `k create cronjob my-cron-job --image=busybox --schedule="*/1 * * * *" --dry-run=client -o yaml -- /bin/sh -c 'echo "Current date: $(data)"'`<br>
+- `k create cronjob my-cron-job --image=busybox --schedule="*/1 * * * *" --dry-run=client -o yaml -- /bin/sh -c 'echo "Current date: $(date)"'`<br>
 Same as above but in this example, we specify the command for the container as part of options in the terminal. If the required command based on the exam question is simple enough you can execute this straight away without the `--dry-run=client -o yaml` option as in this example.
 
 - `k create job my-job --image=busybox --dry-run=client -o yaml`<br>
