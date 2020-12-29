@@ -170,8 +170,8 @@ A quick way to list out a deployments containers. The `-i` flag for the `grep` c
 - `k expose deploy -n <name-space> mydeploy --type=NodePort --port=80 --name=service-name --dry-run -o yaml > manifest-file.yaml`<br>
 Same as above but namespace specific. Note the `--dry-run -o yaml > manifest-file.yaml` is optional depending on the task at hand.
 
-- `k scale deployment/deploy --replicas=5`<br>
-  Quick command to add more replicas for a deployment. No need to update the deployment manifest file then apply it if you are faced with this sort of task.
+- `k scale deploy/<mydeploy> --replicas=5`<br>
+  Quick command to add more replicas for a deployment called `mydeploy`. No need to update the deployment manifest file then apply it if you are faced with this sort of task.
 
 - `k autoscale deployment foo --min=2 --max=10`<br>
    Quickly create an autoscale for a deployment.<br>
