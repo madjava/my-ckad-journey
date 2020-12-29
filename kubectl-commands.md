@@ -320,4 +320,5 @@ I hope these come in handy and most importantly come back to memory if/when you 
 
 You can continue reading up on some [CKAD exam preparation tips](README.md) and resources that i found helpful [here](README.md).
 
-Best of luck 🙏🏽
+---
+Wishing you success in your exams 🙏🏽

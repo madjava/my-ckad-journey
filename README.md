@@ -185,3 +185,6 @@ Some other materials i found informative via Youtube and thought to mention here
 * [Tips on preparing for Certified Kubernetes Application Developer (CKAD)](https://www.youtube.com/watch?v=rnemKrveZks&feature=youtu.be)
 
 *Thanks to all creators of these content.*
+
+---
+Wishing you success in your exams 🙏🏽
