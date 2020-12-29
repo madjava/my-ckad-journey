@@ -98,14 +98,14 @@ alias k=kubectl
 - `k label po <pod-name> env-`<br>
   Removes a label called `env` on the pod called `pod-name`
 
-- `k get all -n <name-space> -l tier=control-plane`<br>
+- `k get all -n <name-space> -l key=value`<br>
    Get all resources in a particular namespace limited by the label<br>
 
    `k get all -n <name-space>`<br>
    Dumps all resource detail to your terminal.<br>
    You can add the `--no-header` flag if you want to do some counting by piping to `grep`.
 
-- `k run backend --image=nginx --serviceaccount=sa-name`<br>
+- `k run backend --image=nginx --serviceaccount=<sa-name>`<br>
    When you need to create a pod with a giving service account name. You can combine this with the `--dry-run=client -o yaml` to generate a manifest file to further update if required. You at are sure this bit is covered.
 
 - `k run app --image=busybox --dry-run=client -o yaml  -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskusage.log; sleep 5; done;'`<br>
@@ -136,7 +136,7 @@ alias k=kubectl
   Creates a pod with environment variable set. Saves you having to edit a yaml file or wad through documentation. Depending on the task this may event be sufficient.
 
 - `k run nginx arg1 arg2 --image=nginx --restart=Never --labels=app=v1 --dry-run=client -o yaml`<br>
-  Creates a pod with two arguments and labels. Timesaver and you can output to a defination file and edit further.
+  Creates a pod with two arguments and labels. Timesaver and you can output to a definition file and edit further.
 
 - `k run nginx --image=nginx --restart=Never --requests='cpu=100m,memory=256Mi' --limits='cpu=200m,memory=512Mi'`<br>
  Creates a pod with resource requirement already set. Let wading around through documentation. You dan output using `--dry-run=client -o yaml` to edit further if required.
@@ -164,8 +164,8 @@ A quick way to list out a deployments containers. The `-i` flag for the `grep` c
 - `k set image deploy/<deployment-name> nginx-container=nginx:latest`<br>
  Quickly update a deployments image on the fly for the container called `nginx-container`.
 
-- `k expose deploy mydeploy --name=service-name --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml`<br>
- Exposes a deployment by creating a service called `the-service` of type `NodePort`. Can be outputted to a file or run straight in the terminal depending on the task at hand. Omit the `--dry-run=client -o yaml` section if you want to run immediately.
+- `k expose deploy mydeploy --name=<service-name> --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml`<br>
+ Exposes a deployment called `mydeploy` by creating a service called `service-name` of type `NodePort`. Can be outputted to a file or run straight in the terminal depending on the task at hand. Omit the `--dry-run=client -o yaml` section if you want to run immediately.
 
 - `k expose deploy -n <name-space> mydeploy --type=NodePort --port=80 --name=service-name --dry-run -o yaml > manifest-file.yaml`<br>
 Same as above but namespace specific. Note the `--dry-run -o yaml > manifest-file.yaml` is optional depending on the task at hand.
