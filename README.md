@@ -55,10 +55,12 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
   - `k explain po.spec` or
   - `k explain po.spec.containers`
 
-  While practicing learn to use and drill down using `explain` quickly. You can pipe it with `less` or `grep` for even more granularity. Some examples include
+  While practicing learn to use and drill down using `explain` quickly. You can pipe it with `less` or `grep` for even more granularity. Some examples of how i could quickly use this to get some info to build or update a resource manifest file includes
 
   `k explain po.spec --recursive | less`<br>
-  `k explain po.spec.containers --recursive | grep -i readinessprobe -A15`<br>
+  `k explain po.spec.containers --recursive | less`<br><br>
+  `k explain po.spec.containers.readinessProbe --recursive | less` or <br>
+  `k explain po.spec.containers --recursive | grep -i readinessprobe -A15`<br><br>
   `k explain deploy.spec.strategy`<br>
   `k explain svc.spec`
 
