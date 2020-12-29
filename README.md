@@ -109,7 +109,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
 - Save yourself the hassles and close all running applications, if on a Mac run `cmd+alt+esc` to see what's still active in the background, leave only your browser app running.
 
-- Make sure everywhere around you is clear, no books, papers or any other \"suspicious\" items. They are strict, but really nice and polite too 👌🏾
+- Make sure everywhere around you is clear, no books, papers or any other \"suspicious\" items, i even had to take off my Fitbit 😜. They are strict, but really nice and polite too 👌🏾
 
 - You can have only one other tab open, let that be the K8s documentation page.
 
