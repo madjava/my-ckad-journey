@@ -36,9 +36,9 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
   - `rs` for `replicaset`
   - `cm` for `configmap`
 
-  This is not an exhaustive list though but found these to be common ones and can save you some typing, time and reduce typos too
+  This is not an exhaustive list though but found these to be common ones and can save you some typing, time and reduce typos too and while practicing use these short forms so it becomes second nature.
 
-- Learn to use the `-h` help flag for quick info on imperative commands if you are stuck or not entirely sure at that moment or want to quickly verify command options available. e.g.
+- Learn to use the `-h` help flag for quick info on imperative commands if you are stuck, not entirely sure or want to quickly verify command options available. e.g.
   - `k run -h`
   - `k expose -h`
   - `k create -h`
@@ -55,7 +55,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
   - `k explain po.spec` or
   - `k explain po.spec.containers`
 
-  While practicing learn to use and drill down using `explain` quickly. You can combine it (pipe it) with `less` or `grep` for even more granularity. Some examples include
+  While practicing learn to use and drill down using `explain` quickly. You can pipe it with `less` or `grep` for even more granularity. Some examples include
 
   `k explain po.spec --recursive | less`<br>
   `k explain po.spec.containers --recursive | grep -i readinessprobe -A15`<br>
@@ -66,7 +66,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
 - Learn to use `--dry-run=client -o yaml` to generate yaml manifest files with you can further edit. Also don't forget to redirect to an actual file e.g. `k run po nginx --dry-run=client -o yaml > my-pod.yaml` to create the manifest file.<br>
 
-- 🧨 Don't create yaml files from scratch, you would run out of time for sure if you do that. You either copy an example from the documentation and modify or use the dry-run option to create a skeleton which is then edited accordingly.
+- 🧨 Don't create yaml files from scratch, you would run out of time for sure if you do that. You either copy an example from the documentation and modify or use the `--dry-run` option to create a template which is then edited accordingly.
 
 - Learn to use the K8s documentation, have your bookmarks ready for speedy access. I have provided my bookmark [here](my-k8s-bookmarks.html.zip) that you can use for a start and build upon. Import that in your **Chrome browser** and further update.
 
@@ -76,7 +76,7 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 
 - Learn to `ssh` into other nodes and execute K8s commands there and back out again. This helps speed up things in troubleshooting scenarios. So get familiar with jumping from node to node or examining pods and pod logs via the `exec` and `logs` command, some example can be found in the **Pod** section [here](kubectl-commands.md).
 
-- Have some basic shell knowledge at hand like writing to a file at a particular location etc. A quick `cat` here and there can save you some seconds, `grep` can be very handy also.
+- Have some basic shell knowledge at hand like writing to a file at a particular location etc. A quick `cat`, `ls` or `cd` here and there can save you some seconds, `grep` can be very handy also.
 
 - Get familiar with your Vim or Nano. CKAD is a very hands-on exam and you would need to use a terminal. No multiple choice questions. If you see multiple choice questions please pause and verify you are actually sitting for the CKAD 😝.
 
@@ -87,6 +87,8 @@ I had to get familiar with a few `kubectl` commands some of which turned out to 
 - 🧨 Be namespace aware, learn to execute tasks with the `-n` or `--namespace=<the namespace>` option when its required else your hard work would be in the wrong place. Use the short form preferably.
 
 - 🧨 When you copy yaml examples from the K8s documentation, be sure to remove what's not needed and make sure you have edited what needs to be edited, e.g. the name of the pod, container names and image, pod labels, port numbers etc. that you may have carried over and which are not relevant to the task at hand.<br><br>If using Vim, practice deleting lines quickly, undoing changes and jumping to the top of the file after you paste snippets in. Also note formatting and indentation as it may go out of place after deleting or copy-pasting stuff from the documentation web page.
+
+- It's ok if your yaml manifest file is not pretty, just make sure the indentations are correct. The system that marks it am sure would not mind 😜. Don't let formatting eat up your time.
 
 - Generally tasks around \'*Services & Networking*\', \'*State Persistence*\' and \'*Multi-Container Pods*\' tend to take longer time to complete. Not because of complexity but because there's lots of moving parts.<br><br>For example, to mount a volume on a pod you have to first create the `pv` then the `pvc` then the `pod` which has to be mounted on a volume, now imagine it's a multi-pod scenario then there's even more to do.<br><br>Summary, practice doing these task quickly, for persistent volumes there are no imperative commands as at the moment to quickly create template manifest files to build upon, you have to go to the documentation. Also if you need to set up ingress or egress amongst services you have to reference the documentation.<br><br>Learn to manage time in such scenarios, have your bookmark ready also. You can find what my Chrome bookmarks looked like [here](my-k8s-bookmarks.html.zip)
 

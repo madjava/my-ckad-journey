@@ -56,10 +56,10 @@ alias k=kubectl
    Gets all Pods in all namespaces. Very handy if you need to find a faulty pod<br>
 
    `k get po -n <name-space>`<br>
-   Gets all Pods in a particular namespace. Another quick way to find failing resource by just looking at the `READY` column or `STATUS` you can tell if something is not right.
+   Gets all Pods in a particular namespace. By looking at the `READY` column or `STATUS` you can tell if something is not right.
 
    `k get po -o wide`<br>
-   As above but with more details about the pods e.g. it's `IP`, `NODE` also stats like `STATUS` and `READY` info.
+   As above but with more details about the pods e.g. it's `IP`, `NODE` also stats like `STATUS` and `READY` info can tell you what node the pod resides, its ip etc.
 
 - `k run mypod --image=nginx --namespace=dev --dry-run=client -o yaml`<br>
    or<br>
@@ -314,7 +314,7 @@ Get quick info about the networkpolicy. Comes in handy when troubleshooting conn
    Keep this knowledge in your tool set, you may need it.
 
 
-Play with these commands over and over again and use then in your practice tests. I found that once you cover the K8s CKAD exam [Domains & Competencies](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/) scope, there would be no strange surprises in the questions, you'd just need to learn to move fast, manage your time and quickly get the info you need for the task at hand.
+Play with these commands over and over again and use them in your practice tests when the need presents itself, they would become second nature very quickly. I found that once you've covered the K8s CKAD exam [Domains & Competencies](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/) scope, there would be no strange surprises in the questions, you'd just need to learn to move fast, manage your time and quickly get the info you need for the task at hand.
 
 I hope these come in handy and most importantly come back to memory if/when you need them during your exam.
 
