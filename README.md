@@ -138,7 +138,7 @@ Overall i was still happy i had managed my time well as i was able to get to all
 
 🔥 [Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer/) by [Mumshad Mannambeth](https://www.udemy.com/user/mumshad-mannambeth/) and [Vijin Palazhi](https://www.udemy.com/user/vijin-palazhi-2/).
 
-I got this via [Udemy](https://www.udemy.com/) and can't emphasise enough, this course is a **MUST HAVE** trust me on this one. The [KodeCloud](https://kodekloud.com) labs are just awesome and gives you hand-on practice environment to work with. I went though the Lighting labs and Mock exams at least twice and also went through each and every practice test after each lecture sections and their solution videos to learn what i did wrong and also see how someone else would tackle the same task for the ones i got right.
+I got this via [Udemy](https://www.udemy.com/) and can't emphasise enough, this course is a **MUST HAVE** trust me on this one. The [KodeCloud](https://kodekloud.com) labs are just awesome and gives you hands-on practice environment to work with. I went though the Lighting labs and Mock exams at least twice and also went through each and every practice test after each lecture sections and their solution videos to learn what i did wrong and also see how someone else would tackle the same task for the ones i got right.
 
 👌🏾 [Kubernetes Made Easy: Learn Kubernetes From Scratch](https://www.udemy.com/course/kubernetes-made-easy/) by [Srinath Challa](https://www.udemy.com/user/srinathchalla/).
 
