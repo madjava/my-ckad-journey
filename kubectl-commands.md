@@ -162,7 +162,7 @@ alias k=kubectl
 A quick way to list out a deployments containers. The `-i` flag for the `grep` command is for case insensitivity and `-A2` says give me just two lines, which should include the container, it's name and it's image.
 
 - `k set image deploy/<deployment-name> nginx-container=nginx:latest`<br>
- Quickly update a deployments image on the fly for the container called `nginx-container`.
+ Quickly update a deployments image on the fly for the container called `nginx-container` to the latest `nginx` image.
 
 - `k expose deploy mydeploy --name=<service-name> --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml`<br>
  Exposes a deployment called `mydeploy` by creating a service called `service-name` of type `NodePort`. Can be outputted to a file or run straight in the terminal depending on the task at hand. Omit the `--dry-run=client -o yaml` section if you want to run immediately.
@@ -246,9 +246,6 @@ Quick command which creates a service for the `mydeploy` deployment
 
 - `k rollout history deploy <deploy-name>`<br>
   Gets you the rollout history for the deployment.
-
-- `k set image deploy <deploy-name> <container-name>=<container-image>`<br>
-  Updates a deployments image by setting `container-name` image another image or version
 
 ### Jobs and CronJobs
 - `k create cronjob my-cron-job  --schedule="*/1 * * * *" --image=busybox --dry-run=client -o yaml`<br>
