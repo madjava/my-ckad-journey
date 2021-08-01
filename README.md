@@ -131,9 +131,12 @@ From my own experience, if you have and gone through the exam scope, the [CKAD's
 
 Don't forget to flag it and circle back iteratively if a question is eating too much of your time or you don't yet understand what's required, that strategy helped me alot.
 
-Honestly i didn't answer all the questions, i had a question left and it was obvious i had ran out of time. A minute before my clock ran out i applied the manifest file i was working on, it ran successfully, i knew it was half baked but also knew that at least some requirements where in there.
+🧨 You might get a "walk through" when you start your exam (I did on mine), while it's nice and all note that it's part of your overall time that's ticking away, the user interface is quite intuitive so decide if you want to "walk through" or skip it immediately, I did.
+Also, if the interface is still the same for you, the green bar somewhere top left indicates how much time you have left, keep an eye on it. The invigilator would also prompt you at some point to keep you aware.
 
-Overall i was still happy i had managed my time well as i was able to get to all the questions, i guess the other 18 where in order or at least for the most parts to give me a passing score 🙂.
+Honestly I didn't answer all the questions, I had a question left, and it was obvious I had ran out of time. A minute before my clock ran out I applied the manifest file i was working on, it ran successfully, I knew it was half baked but also knew that at least some requirements where in there.
+
+Overall I was still happy i had managed my time well as i was able to get to all the questions, i guess the other 18 where in order or at least for the most parts to give me a passing score 🙂.
 
 
 ### Training resources
